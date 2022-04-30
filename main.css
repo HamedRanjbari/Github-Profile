@@ -1,0 +1,155 @@
+:root{
+  --bgColor: #02021b;
+  --purpleColor: #282828;
+  --whiteColor: antiquewhite;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  background-color: var(--bgColor);
+  color: var(--whiteColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.user-form{
+  width: 60%;
+  min-width: 600px;
+}
+.user-form input{
+  width: 100%;
+  display: block;
+  background-color: var(--purpleColor);
+  border: 0;
+  border-radius: 10px;
+  color: var(--whiteColor);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+.user-form input:focus{
+  outline: 0;
+}
+.user-form input::placeholder{
+  color: gray;
+}
+.card{
+  min-width: 700px;
+  background-color: var(--purpleColor);
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 3rem;
+  margin: 0 1.5rem;
+}
+.profile-img{
+  border-radius: 50%;
+  border: 5px solid var(--bgColor);
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+}
+.user-details{
+  color: rgb(255, 255, 255);
+  margin-left: 2rem;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.user-details h2{
+  margin: 1rem 0;
+  text-align: center;
+}
+.user-details ul{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  min-width: 400px;
+  margin: 2rem 0;
+}
+.user-details ul li{
+  display: flex;
+  align-items: center;
+}
+.user-details ul li strong{
+  font-size: .9rem;
+  margin-left: 0.5rem;
+}
+#repository{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.repo{
+  color: var(--whiteColor);
+  background-color: var(--bgColor);
+  font-size: .9rem;
+  padding: .5rem 1rem;
+  margin-right: 1rem;
+  display: inline-block;
+  border-radius: 5px;
+  text-align: center;
+  transition: all .6s ease-in-out;
+}
+.repo:hover{
+  transform: translateY(-5px);
+}
+@media screen and (max-width: 800px) {
+  main{
+    width: 500px;
+  }
+  .card{
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+  }
+  .user-details{
+    width: 100%;
+    margin: 2rem 0;
+  }
+  .user-details ul{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-width: 0;
+    margin: 2rem 0;
+  }
+  .user-details ul li{
+    margin: 0 1rem;
+  }
+  .user-form{
+    min-width: 300px;
+  }
+  .repo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  main{
+    width: 350px;
+  }
+  .user-details ul{
+    flex-direction: column;
+  }
+  .user-details ul li{
+    margin-bottom: 1rem;
+  }
+  .repo{
+    font-size: .7rem;
+    padding: .5rem;
+  }
+}
